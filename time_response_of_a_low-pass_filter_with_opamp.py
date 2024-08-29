@@ -12,6 +12,7 @@ print(f'Cutoff frequency: {fc/1e3:.2f} kHz')
 numerator = [R2]
 denominator = [C*R2*R1, R1]
 H = lti(numerator,denominator)
+sys = tf(R2, [C*R2*R1, R1])
 print(H)
 
 t = np.linspace(0, 0.001, 1000)
@@ -39,6 +40,27 @@ plt.plot(t, y2, label='Saída (111.44 kHz)')
 plt.xlabel('Tempo [s]')
 plt.ylabel('Amplitude')
 plt.title('Resposta do Circuito para 111.44 kHz')
+plt.legend()
+
+#plt.tight_layout()
+
+y3,time = impulse(sys)
+y4,time = step(sys)
+
+plt.figure(figsize=(12, 6))
+
+plt.subplot(2, 1, 1)
+plt.plot(time, y3)
+plt.xlabel('Tempo [s]')
+plt.ylabel('Amplitude')
+plt.title('Circuit Impulse Response')
+plt.legend()
+
+plt.subplot(2, 1, 2)
+plt.plot(time, y4)
+plt.xlabel('Tempo [s]')
+plt.ylabel('Amplitude')
+plt.title('Circuit Step Response')
 plt.legend()
 
 plt.tight_layout()

@@ -8,13 +8,14 @@ def bode2(num, den, f0, ff, N):
 
   w = logspace(log10(f0), log10(ff), N, endpoint=True, base=10.0)
   arrayabsHjw, arrayargHjw, omega = frequency_response(H, w)
-
+  #print(arrayabsHjw)
   #arrayabsHjw, arrayargHjw, omega = bode(H)
 
   plt.figure(figsize=(12, 6))
 
   plt.subplot(2, 1, 1)
   plt.semilogx(omega,20*log10(arrayabsHjw)) 
+  #plt.semilogx(omega,(arrayabsHjw))
   plt.grid(True)
   plt.ylabel('Magnitude |H(jw)|, (dB)')
   plt.xlabel('Frequency, w (rad/s)')

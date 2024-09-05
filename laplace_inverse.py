@@ -1,44 +1,49 @@
-from math import *
-from numpy import *
-from control.matlab import *
 from sympy.integrals.transforms import exp, inverse_laplace_transform, laplace_transform
-#from sympy import Symbol, symbols
 from sympy.abc import s, t
+from sympy import simplify
 
 def i_laplace(num, den):
     #t,s = symbols("t s")
     #a = Symbol('a', positive = True)
     acm = 0
-    i = 2
+    i = len(num) - 1
 
     for k in num:
         acm = acm + s**(i)*k
         i = i - 1
-    NUM = acm
-    print('numerator:', NUM)
+    NUM = simplify(acm)
+    print('Numerator:', NUM)
 
     acm = 0
-    i = 2
+    i = len(den) - 1
 
     for k in den:
         acm = acm + s**(i)*k
         i = i - 1 
-    DEN = acm
-    print('denominator:', DEN)
+    DEN = simplify(acm)
+    print('Denominator:', DEN)
 
-    H = NUM/DEN
-    print('H:', H)
-    h = inverse_laplace_transform(H, s, t)
-    print('inverse laplace:', h)
+    H = simplify(NUM/DEN)
+    print('H(s):', H)
 
-    #G =  laplace_transform(h, t, s, noconds = True) 
-    #print('laplace transform:', G) 
-    #if H == G:
-    #    print('right')
+    h = simplify(inverse_laplace_transform(H, s, t))
+    print('Inverse Laplace:', h)
+
+    # Calculate the Laplace Transform to verify
+    #G, cond = laplace_transform(h, t, s)[:2] 
+    #G = simplify(G)
+    #print('Laplace Transform:', G) 
+    #print('Conditions:', cond)
+
+    #if simplify(H - G) == 0:
+    #    print('Transformation is correct.')
     #else:
-    #    print('no right')
-    #g = inverse_laplace_transform(G,s,t)
-    #print('last:', g)
+    #    print('Transformation is not correct.')
 
-#a = Symbol('a', positive = True)
-#i_laplace([0,0,1],[1, 2 , 1])
+    #g = inverse_laplace_transform(G, s, t)
+    #print('Final Inverse Laplace:', g)
+
+    #pole_zero(H)
+
+# Example of use
+#i_laplace([0, 0, 1], [1, 2, 1])

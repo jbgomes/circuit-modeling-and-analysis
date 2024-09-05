@@ -1,5 +1,5 @@
-from frequency_response import bode2
 from laplace_inverse import i_laplace
+from frequency_response import bode2
 
 k = 10
 R1 = 1e5

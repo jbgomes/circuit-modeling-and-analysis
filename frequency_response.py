@@ -37,8 +37,3 @@ def bode2(num, den, f0, ff, N):
         plt.axvline(x=freq, color='grey', linestyle='--', linewidth=0.5)
 
   plt.show()
-
-#s = tf('s')
-#H = (s+1)/(s**2 + 0.5*s + 1)
-#print(H)
-#bode2(H, 1e-4, 1e4, 271)

@@ -80,4 +80,5 @@ print(f'Cutoff frequency: {fc/1e3:.2f} kHz')
 numerator = [R2]
 denominator = [C*R2*R1, R1]
 
+
 time_response(numerator, denominator, fc)

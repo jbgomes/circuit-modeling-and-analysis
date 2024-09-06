@@ -1,0 +1,71 @@
+[33mcommit 12f975679660f480a2dca11d115fd98b8d5d3b5e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Thu Sep 5 15:20:09 2024 -0300
+
+    build: create functions and organize code
+
+[33mcommit 0e14885c906e11bce34df0c1fcefe4ea223cf8b1[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Wed Sep 4 15:29:47 2024 -0300
+
+    style: reduce laplace function
+
+[33mcommit efcd6ea234d20334ae18a4fb421b0a46df0ca0b8[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Wed Sep 4 14:18:01 2024 -0300
+
+    feat: add inverse laplace transform function
+
+[33mcommit afbc2fa49d5b5b73c815e8f7976a58039105c25c[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Tue Sep 3 15:57:49 2024 -0300
+
+    docs: update on page3 comment
+
+[33mcommit 69b508ff4eb2c72c8adbee8f8c95d790238cd8ad[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Mon Sep 2 10:56:54 2024 -0300
+
+    docs: add single-stage inverting amplifier small signal model equations
+
+[33mcommit 72fb2365ce23f56ae1915a269291285cb158aaf6[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Fri Aug 30 16:20:58 2024 -0300
+
+    test: add frequency response of operational amplifier
+
+[33mcommit bfb395db2bc850bd26604f867ef01f37467fed6b[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Fri Aug 30 11:53:33 2024 -0300
+
+    feat: add frequency response function
+
+[33mcommit 9dfdbf829dce14fd8d271a19dbb409eafb3dbae5[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Thu Aug 29 15:34:25 2024 -0300
+
+    feat: add circuit feedback simulation
+
+[33mcommit e2fa8b5f6d6f507a3b88426360b4e70316170c28[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Thu Aug 29 15:12:51 2024 -0300
+
+    feat: add function that gets the poles and zeros of the system
+
+[33mcommit 2116d21d09c2fc041b327a67e7635af2efa48181[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Thu Aug 29 14:29:27 2024 -0300
+
+    feat: add simulation of response to ramp signal
+
+[33mcommit 54989519b5ab1856a3a9e3ab4070abc45f957268[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Thu Aug 29 14:14:22 2024 -0300
+
+    feat - add response simulation of step and impulse
+
+[33mcommit 691c27b856e8146accc8e48e1b3078b795a5852a[m
+Author: Julia Gomes <juliatb.gomes@gmail.com>
+Date:   Thu Aug 29 12:55:39 2024 -0300
+
+    feat: generate low pass filter time response with sinusoidal input with frequency below and above the cutoff frequency
